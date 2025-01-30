@@ -1,0 +1,186 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Hero Section */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.hero {
+  background-image: url('images/jiji.jpg');
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  color: white;
+  padding: 80px 20px;
+}
+
+.hero :hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.h {
+  text-shadow: 0px 0px 4px black;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+
+}
+
+.hero p {
+  font-size: 1.5em;
+}
+
+/* Activities Section */
+.activities {
+  background-color: #f4f4f4;
+  padding: 40px 20px;
+}
+
+.activities h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.activity {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.activity h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.activity p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Hover Effect */
+.activity:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.img {
+  width: 300px;
+  /* Allow images to scale based on the container width */
+  max-width: 200px;
+  /* Ensure they don't become too large */
+  height: auto;
+  border-radius: 10%;
+  display: block;
+  margin: 0 auto;
+  /* Center the images */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding-top: 10px;
+  text-align: center;
+}
+
+footer:hover {
+  opacity: 0.8;
+}
+
+/* Flexbox Layout for Footer */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  /* Distribute space between items */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* Allow wrapping for smaller screens */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each Section Inside Footer */
+.footer-content>div {
+  flex: 1 1 30%;
+  /* Each section takes up 30% width, can grow and shrink */
+  padding: 5px;
+  text-align: left;
+}
+
+.footer-content h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer-content p {
+  font-size: 1em;
+  color: #ccc;
+  margin-bottom: 20px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.social-links a {
+  font-size: 2em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff5722;
+  /* Change to a bright color on hover */
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    /* Stack sections vertically on small screens */
+    padding: 20px;
+  }
+
+  .footer-content>div {
+    flex: 1 1 100%;
+    /* Each section takes up full width */
+    margin-bottom: 20px;
+  }
+
+  .social-links ul {
+    justify-content: center;
+    /* Center social links on small screens */
+  }
+}
